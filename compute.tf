@@ -50,7 +50,7 @@ resource "aws_autoscaling_group" "bloom_web" {
 
 resource "aws_launch_template" "bloom_app" {
   name_prefix   = "app-lt-"
-  image_id      = "ami-03f65b8614a860c29" #AMI ID for Ubuntu 22.04
+  image_id      = data.aws_ami.server_ami.id #AMI ID for Ubuntu 22.04
   instance_type = var.app_instance_type   #Can be changed in the variable.tf file
 
   vpc_security_group_ids = [aws_security_group.bloom_web.id]
