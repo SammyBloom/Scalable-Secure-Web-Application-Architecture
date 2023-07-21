@@ -53,3 +53,13 @@ variable "db_ssh_security_group" {
   type        = list(string)
   default     = ["0.0.0.0/0"]
 }
+
+variable "web_instance_type" {
+  description = "EC2 instance type for the web tier"
+  default     = "t2.micro"
+}
+
+variable "app_instance_type" {
+  description = "EC2 instance type for the app tier"
+  default     = "t2.micro"
+}
