@@ -10,7 +10,7 @@
     <br>
      [![forthebadge](https://forthebadge.com/images/badges/built-for-aws.svg)](https://forthebadge.com)
     <br>
-     ![Static Badge](https://img.shields.io/badge/Technology-Terraform-9370DB)
+     <img src="https://img.shields.io/badge/Technology-Terraform-9370DB" alt="Technology Terraform">
     <br>
 
     </p>   
