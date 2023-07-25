@@ -51,7 +51,7 @@ resource "aws_security_group_rule" "bloom_web_ssh" {
   from_port   = 22
   to_port     = 22
   protocol    = "tcp"
-  cidr_blocks = var.web_ssh_security_group #Should be changed for security reasons
+  cidr_blocks = var.web_ssh_security_group 
 }
 
 
@@ -109,5 +109,5 @@ resource "aws_security_group_rule" "bloom_db_ssh" {
   from_port   = 22
   to_port     = 22
   protocol    = "tcp"
-  cidr_blocks = var.db_ssh_security_group #Should be changed for security reasons
+  cidr_blocks = var.db_ssh_security_group 
 }

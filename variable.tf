@@ -1,6 +1,6 @@
 variable "aws_region" {
   description = "States the region the infrastructure will be deployed to"
-  default     = "us-west-2"
+  default     = "us-east-1"
 }
 
 variable "aws_profile" {
@@ -39,13 +39,13 @@ variable "database_subnets" {
 variable "web_ssh_security_group" {
   description = "CIDR block for the web-tier security group tp grant ssh access"
   type        = list(string)
-  default     = ["0.0.0.0/0"]
+  default     = ["0.0.0.0/0"]  #Should be changed for security reasons
 }
 
 variable "app_ssh_security_group" {
   description = "CIDR block for the app-tier security group tp grant ssh access"
   type        = list(string)
-  default     = ["0.0.0.0/0"]
+  default     = ["0.0.0.0/0"] #Should be changed for security reasons
 }
 
 variable "db_ssh_security_group" {
