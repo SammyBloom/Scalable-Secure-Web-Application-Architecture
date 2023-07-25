@@ -70,62 +70,65 @@ Some text...
 #### How to Execute the Script (Project)
 
 **1. Required to run project:**
-       ` - To run this project use Android studio 3.* and later. It will be less messy.
-         - Gradle version used: gradle 4.0. You can use multiple gradle versions vby having them stored offline. [You can read this to set it up.](www.sth)
+       ` - Provider version of 5.9.0. Provider is (https://registry.terraform.io/hashicorp/aws)[You can read this to set it up.](www.sth)
+         - Have AWS CLI installed.
+         - Have Terraform installed.
         `
 
 **2. Clone this repository :**
  
-         `git clone https://github.com/SammyBloom/GADsLeaderBoard`
+         `git clone https://github.com/SammyBloom/Scalable-Secure-Web-Application-Architecture.git`
          
-**3. open Project in Android Studio**
+**3. Open Project in Text Editor (Visual Studio Code)**
 
-**4. Build Project**
+**4. Preview the AWS infrastructures that will be created :**
 
-**5. Incase of an error when building project, update your gradle version, Build Tools download**
+        `terraform plan`
+
+      Password: administration  
+
+**5. Spin up the infrastructures :**
+
+        `terraform apply -auto-approve`
+
+      Password: administration    
+
+**6. Test the application by entering the public IP address of the EC2 instance created. The index.html or index1.html should be rendered**        
 
 
-#### Dependencies
-Picasso
-Glide
-Gson
-Timber
-RecyclerView
-Retrofit
+#### Dependencies/Configurations/Installations
+Terraform
+AWS
 
 ## To Do List
 
-- [x] Multi-Activity 
-- [x] View pager
-- [x] Customizing Toolbar
-- [x] RecyclerView
-- [x] Making Network Request
-- [x] Working with Google Form
-- [x] Api Requests
+- [x] Fix auto-scaling group not creating because it cannot find the aws_launch_template id that was created.
+- [x] Add polish to the script to ensure all editing is only done in the variable.tf and dev.tfvars files.
+- [x] Ensure that the userdata for both app and web runs and their respective index.html is rendered.
 
 
 #### CONTRIBUTING
 ### Assets
 
-[Resources](https://drive.google.com/drive/folders/1l-huMnFzu0Lh_olBCzHgovsUCwbKouMb)
+[Resources](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
 ### Want to contribute?
-I would/ We'd love to have your help in making  **{this app (replace with name of your project)}** better. The project is still very incomplete, but if there's an issue you'd like to see addressed sooner rather than later, let me(/us) know. 
+I would/we'd love to have your help in making  **{this script (Deploy a Scalable and Secure Web Application on AWS using Terraform)}** better. The project is still very incomplete, but if there's an issue you'd like to see addressed sooner rather than later, let me(/us) know. 
 
-For any concerns, please open an [issue{edit this}](https://github.com/SammyBloom/GADsLeaderBoard/issues), or JUST, [fork the project and send a pull request{edit this}](https://github.com/YourUserNameHere/ProjectName/pulls). 
+For any concerns, please open an [issue](https://github.com/SammyBloom/Scalable-Secure-Web-Application-Architecture/issues), or JUST, [fork the project and send a pull request](https://github.com/SammyBloom/Scalable-Secure-Web-Application-Architecture/pulls). 
 
 <hr>
 
 
 ## Versions 
-* Version 1.0  DATE 11/9/2020
+* Version 1.0  DATE 25/7/2023
 
 
 ## Contributors
-For personal feedback or questions feel free to contact me via the mail address, which is mentioned on my [Github profile](link (https://github.com/SammyBloom). If you have found any bugs or want to post a feature request please use the [bugtracker](https://github.com/SammyBloom/GADsLeaderBoard/issues) to report them.
+For personal feedback or questions feel free to contact me via the mail address, which is mentioned on my [Github profile](link (https://github.com/SammyBloom). If you have found any bugs or want to post a feature request please use the [bugtracker](https://github.com/SammyBloom/Scalable-Secure-Web-Application-Architecture/issues) to report them.
 
 
 #### Developer
 * e-mail: nwachiemi@gmail.com
-* Twitter: [@SCNBloom_](https://twitter.com/SCNBloom "SCNBloom")
+* Twitter: [@SCNBloom](https://twitter.com/SCNBloom "SCNBloom")
 
