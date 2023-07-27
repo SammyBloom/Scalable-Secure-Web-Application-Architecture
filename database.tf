@@ -31,9 +31,13 @@ resource "aws_security_group_rule" "bloom_rds" {
     cidr_blocks = var.db_sgr
 }
 
+resource "random_password" "bloom_db_password" {
+  length           = 16
+  special          = true
+  override_special = "!#$%&*()-_=+[]{}<>:?"
+}
 
 # RDS Instance
-
 resource "aws_db_instance" "bloom_instance" {
     allocated_storage = 20
     storage_type = "gp2"
@@ -42,13 +46,13 @@ resource "aws_db_instance" "bloom_instance" {
     instance_class = var.db_instance_class
     db_name = "bloom_mysql"
     username = var.db_username
-    password = var.db_password
+    password = random_password.bloom_db_password.result
     db_subnet_group_name = aws_db_subnet_group.bloom_db.name
     vpc_security_group_ids = [aws_security_group.bloom_rds.id]
 
     multi_az = var.multi_az
 
-    availability_zone = "us-west-2a"
+    availability_zone = "us-east-1a"
 
     backup_retention_period = 7
     skip_final_snapshot = true

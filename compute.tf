@@ -1,7 +1,7 @@
 # Compute resources (Launch Template, Autoscaling Group, ) for web-tier
 resource "aws_launch_template" "bloom_web" {
   name_prefix   = "web-lt-"
-  image_id      = "ami-03f65b8614a860c29" #AMI ID for Ubuntu 22.04
+  image_id      = data.aws_ami.server_ami.id #AMI ID for Ubuntu 22.04
   instance_type = var.web_instance_type   #Can be changed in the variable.tf file
 
   vpc_security_group_ids = [aws_security_group.bloom_web.id]

@@ -2,7 +2,6 @@
 
 
 
-< align="center">
   <h3 align="center">Scalable-Secure-Web-Application-Architecture</h3>
   
   <p align="center">
@@ -13,7 +12,9 @@
      <img src="https://img.shields.io/badge/Technology-Terraform-9370DB" alt="Technology Terraform">
     <br>
 
-    </p>   
+    </p>
+
+    
 
 <br>
 
@@ -62,8 +63,6 @@ The data tier consists of a database and a program for managing read and write a
 ### Permissions
 
 1. Internet
-
-<hr>
 
 ### TECHNICAL
 

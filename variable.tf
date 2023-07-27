@@ -80,11 +80,6 @@ variable "db_username" {
   default = "admin"
 }
 
-variable "db_password" {
-  description = "RDS Password"
-  sensitive = true
-}
-
 variable "multi_az" {
   description = "Multi-az deployment for the RDS"
   default = false
