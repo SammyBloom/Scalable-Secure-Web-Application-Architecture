@@ -12,8 +12,6 @@
      <img src="https://img.shields.io/badge/Technology-Terraform-9370DB" alt="Technology Terraform">
     <br>
 
-    </p>
-
     
 
 <br>
